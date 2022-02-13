@@ -1,0 +1,33 @@
+h1 {
+  color: #0b3cce;
+  text-shadow: 2px 2px 0 yellow;
+  text-align: center;
+}
+
+fieldset {
+  background: #00ffff;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+legend {
+  background: red;
+  color: white;
+  border: none;
+}
+
+input[type="text"] {
+  background-color: yellow;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -0.5px 3px 0 #a4a4a4;
+}
+
+.boton {
+  background-color: #f5a9a9;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 #a4a4a4;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    
+    
+
+    <title>Formulario Información Alta Telefónica</title>
+</head>
+<body>
+    <h1>Formulario Información Alta Telefónica</h1>
+
+    <form action="" id="telefonica" name="telefonica">
+        <fieldset>
+
+            <legend>Datos Personales</legend>
+                Nombre: <input type="text" name="nombre" maxlength="30" /><br />
+                Apellidos: <input type="text" name="apellidos" maxlength="60" /><br />
+                Dirección: <input type="text" name="direccion" maxlength="60" /><br />
+                Codigo Postal: <input type="text" id="cpostal" name="cpostal" /><br /><div id="posicion"></div> <!-- lugar asignado para el mensaje de validadion -->
+                Provincia: <input type="text" id="provincia" name="provincia" /><br />
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Tipo de Contratación</legend>
+                <input type="radio" name="tipocontra" value="nuevo" checked="checked">Nueva Contratación
+                <input type="radio" name="tipocontra" value="portabi">Portabilidad
+                <input type="radio" name="tipocontra" value="cambio">Cambio de Contrato
+
+                <br /><br />
+
+                Elija la compañía actual: <select name="actual">
+                        <option value="movistar">Movistar</option>
+                        <option value="orange">Orange</option>
+                        <option value="vodafone">Vodafone</option>
+                        <option value="yoigo">Yoigo</option>
+                        <option value="ninguna">No tengo ninguna compañía</option>
+                    </select>
+
+                    &nbsp;&nbsp;&nbsp;
+
+                En caso de portabilidad, elija la nueva compañía: <select name="cambio">
+                        <option value="movistar">Movistar</option>
+                        <option value="orange">Orange</option>
+                        <option value="vodafone">Vodafone</option>
+                        <option value="yoigo">Yoigo</option>
+                    </select>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Datos Bancarios</legend>
+                País: <input type="text" id="pais" name="country" value="ES" readonly="readonly" /> (sólo válido ES)<br />
+                Control IBAN: <input type="text" id="iban" name="iban" placeholder="XX" pattern="[0-9]{2}" /> (dos dígitos)<br />
+                Entidad: <input type="text" id="entidad" name="entidad" placeholder="XXXX" pattern="[0-9]{4}" /> (cuatro dígitos)<br />
+                Sucursal: <input type="text" id="sucursal" name="sucursal" placeholder="XXXX" pattern="[0-9]{4}" /> (cuatro dígitos)<br />
+                DC: <input type="text" id="dc" name="dc" placeholder="XX" pattern="[0-9]{2}" /> (dos dígitos)<br />
+                Cuenta: <input type="text" id="cuenta" name="cuenta" placeholder="XXXXXXXXXX" pattern="[0-9]{10}" /> (diez dígitos)<br />
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+                <input type="checkbox" name="estadistica" value="tv"/> A través de la TV <br />
+                <input type="checkbox" name="estadistica" value="radio"/> A través de la radio <br />
+                <input type="checkbox" name="estadistica" value="internet"/> A través de la Internet <br />
+                <input type="checkbox" name="estadistica" value="otros"/> Otros <br /><br /><br />
+
+                <input type="range" id="valoracion" name="valoracion" value="1" min="1" max="5" /> Valoración [1-5] <br /><br /><br />
+
+                Fecha de la Encuesta: <input type="date" id="fecha" name="fecha" value="2019-01-01"/>
+
+        </fieldset>
+
+        <input type="button" value="Enviar Datos" onclick="validarCodigo(); validarProvinciaPostal();" /> <!-- uso button para que se pueda ver bien que el javascript funciona pero deberia ser type="submit"-->
+        <input type="reset" value="Borrar Datos" /> 
+
+        <br />
+
+        <button type="button" class="boton" onclick="mostrarValoracion();">Mostrar <br /> Valoración</button>
+        <button type="button" class="boton" onclick="mostrarCuenta();">Mostrar <br /> Cuenta</button>
+        <button type="button" class="boton" onclick="mostrarDia();">Mostrar Dia <br /> Semana</button>
+
+        
+        
+
+    </form>
+            
+    <script src="script.js" type="text/javascript"></script>
+    
+</body>
+</html>
